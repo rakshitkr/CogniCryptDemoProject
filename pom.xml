@@ -24,7 +24,7 @@
               <phase>verify</phase>
               <goals><goal>cognicrypt</goal></goals>
               <configuration>
-                <rulesDirectory>PATH_TO_CRYSLBIN</rulesDirectory>
+                <rulesDirectory>src/main/resources/JavaCryptographicArchitecture/</rulesDirectory>
                 <outputFormat>sarif</outputFormat>
               </configuration>
             </execution>
