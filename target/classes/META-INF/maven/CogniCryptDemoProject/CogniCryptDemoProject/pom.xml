@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>CogniCryptDemoProject</groupId>
+  <artifactId>CogniCryptDemoProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>de.fraunhofer.iem</groupId>
+        <artifactId>maven-plugins</artifactId>
+        <version>1.0</version>
+        <executions>
+            <execution>
+              <id>run-cognicrypt</id>
+              <phase>verify</phase>
+              <goals><goal>cognicrypt</goal></goals>
+              <configuration>
+                <rulesDirectory>PATH_TO_CRYSLBIN</rulesDirectory>
+                <outputFormat>sarif</outputFormat>
+              </configuration>
+            </execution>
+          </executions>
+
+
+      </plugin>
+    </plugins>
+  </build>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>cognicrypt</id>
+      <url>https://soot-build.cs.uni-paderborn.de/nexus/repository/cognicrypt/</url>
+    </pluginRepository>
+  </pluginRepositories>
+  
+</project>
